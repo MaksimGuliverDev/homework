@@ -27,10 +27,7 @@ int main()
             integers[row] = new int[columns];
         }
 
-        while (!ifile.eof())
-        {
-            
-            for (int i = 0; i < rows; i++)
+          for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
@@ -39,8 +36,7 @@ int main()
                     integers[i][j] = std::stoi(data);
                 }
             }
-        }
-        ifile.close();
+        
         //Разворот строки в двумерном массиве
         
         for (int i = 0; i < rows; i++)
@@ -70,7 +66,7 @@ int main()
         delete[]integers;
 
     }
-    
+    ifile.close();
 
 }
 
